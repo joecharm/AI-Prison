@@ -4,6 +4,7 @@ colorID: 0
 position: -306,-572
 ---
 Guard: Do you have a problem?
+[[ I know who has smuggled in the phone. |Guard.yes]]
 [[ No problem |Guard.noProb]]
 ===
 title: Guard.noProb
@@ -12,4 +13,50 @@ colorID: 0
 position: 95,-574
 ---
 
+===
+title: Guard.yes
+tags: 
+colorID: 0
+position: -310,-855
+---
+Guard: Are you sure?
+Guard: Don't lie to me otherwise the other inmates won't be happy.
+[[ I'm sure |Guard.sure]]
+===
+title: Guard.sure
+tags: 
+colorID: 0
+position: -324,-1151
+---
+Guard: Who has smuggled in the phone? 
+[[ Pete |Guard.pete]]
+[[ Ashley |Guard.ash]]
+[[ Matt |Guard.matt]]
+===
+title: Guard.pete
+tags: 
+colorID: 0
+position: -654,-1462
+---
+Guard: I was suspicious it was Pete, thanks for letting me know.
+Guard: Better watch your back now you've snitched on Pete.
+<< set $gameWon to true >>
+===
+title: Guard.ash
+tags: 
+colorID: 0
+position: -324,-1456
+---
+Guard: We've searched Ashley's cell, it's not him.
+Guard: Watch your back now you've snitched on the wrong person.
+<< set $gameWon to false >>
+===
+title: Guard.matt
+tags: 
+colorID: 0
+position: 17,-1442
+---
+Guard: We've searched Matt's cell, it's not him.
+Guard: Watch your back now you've snitched on the wrong person.
+<< set $gameWon to false >>
 ===
