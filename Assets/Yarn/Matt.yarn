@@ -1,0 +1,82 @@
+title: Matt.start
+tags: 
+colorID: 0
+position: 132,-662
+---
+<< if visited("Matt.start") is false >> 
+    Matt: Hey dude, don't come any closer!
+    Matt: Unless you know who smuggled in the phone?
+<<else>>
+        <<if $mattFriend is true >>
+        Matt: Hey mate.
+        <<endif>>
+        <<if $mattFriend is false >>
+        Matt: Go away.
+        <<endif>>
+<< endif >>
+
+<< if visited("Matt.start") is false >> 
+[[ I know who smuggled in the phone. |Matt.know]]
+[[ I have no idea who has the phone. |Matt.noKnow]]
+<< endif >>
+===
+title: Matt.know
+tags: 
+colorID: 0
+position: -487,-663
+---
+Matt: The guard told me I will get a reduced sentence if I tell him who it is. 
+Matt: So who is it?
+[[ It's Pete |Matt.pete]]
+[[ It's Ashley |Matt.ashley]]
+[[ It's You |Matt.matt]]
+[[ I'm not saying |Matt.notSaying]]
+===
+title: Matt.noKnow
+tags: 
+colorID: 0
+position: 770,-666
+---
+Matt: Ashley smuggled in the phone, Pete told me. Go tell the guard, I hate Ashley.
+<< set $mattFriend to true >>
+[[ Ok thanks. |Matt.end]]
+===
+title: Matt.pete
+tags: 
+colorID: 0
+position: -776,-1104
+---
+Matt: I don't believe you, me and Pete are friends, it can't be him. Go away.
+<< set $mattFriend to false >>
+===
+title: Matt.ashley
+tags: 
+colorID: 0
+position: -468,-1108
+---
+Matt: Yeah that makes sense, I thought it might be Ashley myself. I hate Ashley.
+<< set $mattFriend to true >>
+===
+title: Matt.matt
+tags: 
+colorID: 0
+position: -169,-1095
+---
+Matt: I wish I had a phone but sadly not. If you don't know anything then leave.
+<< set $mattFriend to false >>
+===
+title: Matt.notSaying
+tags: 
+colorID: 0
+position: 132,-1105
+---
+Matt: Don't be like that. If you're not going to tell me then go away.
+<< set $mattFriend to false >>
+===
+title: Matt.end
+tags: 
+colorID: 0
+position: 767,-969
+---
+
+===

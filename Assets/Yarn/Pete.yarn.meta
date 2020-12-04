@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 647de819305fda94db1ac9fd0ee32e42
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-GB
+  stringIDs:
+  - Pete-Pete.start-0
+  - Pete-Pete.start-1
+  - Pete-Pete.start-2
+  - Pete-Pete.start-3
+  - Pete-Pete.start-4
+  - Pete-Pete.start-5
+  - Pete-Pete.start-6
+  - Pete-Pete.hang-7
+  - Pete-Pete.hang-8
+  - Pete-Pete.hang-9
+  - Pete-Pete.hang-10
+  - Pete-Pete.hang-11
+  - Pete-Pete.hang-12
+  - Pete-Pete.friend-13
+  - Pete-Player.truth-14
+  - Pete-Player.lie-15
+  - Pete-Player.saynothing-16
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 647de819305fda94db1ac9fd0ee32e42,
+    type: 3}
+  localizations: []

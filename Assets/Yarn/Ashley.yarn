@@ -1,0 +1,162 @@
+title: Ashley.start
+tags: 
+colorID: 0
+position: -242,-220
+---
+<< if visited("Ashley.start") is false>>
+    << if $peteFriend is true >>
+        Ashley: Hey you, I've seen you made friends with Pete.
+        << set $ashleyFriend to true >> 
+    << endif >> 
+    << if $peteFriend is false >> 
+        Ashley: Hey you, you're new around here. 
+        << set $ashleyFriend to false >>
+    << endif >>
+<< else >> 
+    << if $ashleyFriend is true >>
+        Ashley: Hey mate.
+    << else >> 
+        Ashley: I don't want to speak to you.
+    <<endif>>
+<< endif >>
+
+<< if visited("Ashley.start") is false>>
+    << if $peteFriend is true >>
+        [[ Me and Pete are friends, why do you care? |Ashley.friendsPete]]
+        [[ He thinks we're friends but I don't like him. |Ashley.friendsPeteNoLonger]]
+        [[ Yeah he hold me who smuggled in the phone. |Ashley.smuggledPhone]]
+    << endif >> 
+    << if $peteFriend is false >> 
+        [[ Yeah I am new and I'm looking for a friend. |Ashley.friend]]
+        [[ Sorry I don't want any trouble. |Ashley.noTrouble]]
+        [[ Hey, do you know anything about a phone that was smuggled in? |Ashley.smuggledPhone]]
+    << endif >>
+<< endif >>
+===
+title: Ashley.friend
+tags: 
+colorID: 0
+position: -1269,-1073
+---
+Ashley: Depends, what are you in here for?
+[[ Selling Cocaine (the truth) |Player.Ashley.truth]]
+[[ Shoplifting (a lie) |Player.Ashley.lie]]
+[[ I'm not saying |Player.Ashley.saynothing]]
+===
+title: Ashley.noTrouble
+tags: 
+colorID: 0
+position: -708,-223
+---
+Ashley: Walk away then.
+<< set $ashleyNoTrouble to true >>
+===
+title: Ashley.smuggledPhone
+tags: 
+colorID: 0
+position: -15,-896
+---
+<< if $ashleyFriend is true >> 
+    Ashley: As we're friends I'll tell you, I was told Matt smuggled in the phone but I'm certain it's Pete. Don't tell the guard though.
+<< endif >>
+<< if $ashleyFriend is false >> 
+ Ashley: Yeah I'm sure Matt smuggled the phone in, go tell the guard, I hate Matt.
+<< endif >>
+<< if $ashleyFriend is true >> 
+    [[ Pete told me himself he has a phone. |Ashley.doNotTell]]
+    [[ Okay |Ashley.thanks]]
+<< endif >>
+
+<< if $ashleyFriend is false >> 
+    [[ I wouldn't tell the guard, I'm not a snitch |Ashley.notASnitch]]
+    [[ Thanks |Ashley.thanks]]
+<< endif >>
+===
+title: Ashley.friendsPete
+tags: 
+colorID: 0
+position: 316,-372
+---
+Ashley: Me and Pete are friends too. Stick with us and we'll keep you safe in here.
+[[ Do you know anything about the smuggled phone? |Ashley.smuggledPhone]]
+[[ Thanks |Ashley.thanks]]
+===
+title: Ashley.friendsPeteNoLonger
+tags: 
+colorID: 0
+position: 331,179
+---
+<< set $ashleyFriend to false >> 
+Ashley: If you're not friends with Pete, you're not friends with me.
+[[ I was just joking. Do you know who smuggled in the phone? |Ashley.smuggledPhone]]
+[[ Ok |Ashley.thanks]]
+===
+title: Ashley.thanks
+tags: 
+colorID: 0
+position: 736,-382
+---
+
+===
+title: Ashley.doNotTell
+tags: 
+colorID: 0
+position: -11,-1212
+---
+Ashley: That's good I need to use it, if you tell anyone about this me and Pete will hurt you.
+===
+title: Ashley.notASnitch
+tags: 
+colorID: 0
+position: 284,-1211
+---
+Ashley: Snitches get stitches in here, maybe we could be friends then.
+<< set $ashleyFriend to true >>
+===
+title: Player.Ashley.truth
+tags: 
+colorID: 0
+position: -796,-1385
+---
+<< set $ashleyFriend to true >>
+Ashley: Sure I'll be your friend. So what do you want?
+[[ Do you know who smuggled in the phone? |Ashley.smuggledPhone]]
+[[ Nothing, just someone to hang with. |Ashley.hang]]
+===
+title: Player.Ashley.lie
+tags: 
+colorID: 0
+position: -797,-1139
+---
+<< set $ashleyFriend to false >>
+Ashley: That's small time, are you serious? I don't want to be friends with a clown.
+[[ Do you know who smuggled in the phone? |Ashley.smuggledPhone]]
+[[ Okay, I'll go, see you around. |Ashley.hang]]
+===
+title: Player.Ashley.saynothing
+tags: 
+colorID: 0
+position: -794,-906
+---
+<< set $ashleyFriend to false >>
+Ashley: If you're not going to tell me, I can't trust you.
+[[ Fine, I just need to know who smuggled in the phone? |Ashley.smuggledPhone]] 
+[[ You can trust me.|Ashley.trust]]
+[[ I'll go then. |Ashley.hang]]
+===
+title: Ashley.hang
+tags: 
+colorID: 0
+position: -1272,-1415
+---
+Ashley: Sure.
+===
+title: Ashley.trust
+tags: 
+colorID: 0
+position: -378,-720
+---
+Ashley: I don't trust people that lie. Do you want something? if not leave me alone.
+[[ Well I want to know who smuggled in the phone? |Ashley.smuggledPhone]]
+[[ Bye |Ashley.hang]]
+===

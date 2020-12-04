@@ -1,0 +1,126 @@
+title: Pete.start
+tags: 
+colorID: 0
+position: 292,152
+---
+<< if visited("Pete.start") is false >> 
+    Pete: What do you want?
+    << set $peteCount = 0 >> 
+<< else >>
+        << set $peteCount = $peteCount + 1>> 
+        Pete: Why do you keep bothering me man?
+    << if $peteCount >= 3 >> 
+        << if $peteFriend is false >> 
+            Pete: Leave me alone before I hurt you
+         << stop >> 
+        << endif >> 
+    << endif >> 
+<< endif >>
+
+<< if visited("Pete.start") is false >> 
+    [[ Hey man, just wondering if I can hang with you? |Pete.hang]]
+    [[ Hey man, I'm looking for a friend. |Pete.friend]] 
+    [[ I'm sorry but I have a question about a smuggled phone |Pete.phone]]
+
+<< else >> 
+    [[ I'm sorry but I have a question about a smuggled phone |Pete.phone]]
+    [[ I want someone to hang with |Pete.hang]]
+<< endif >>
+===
+title: Pete.hang
+tags: 
+colorID: 0
+position: 285,-484
+---
+<< if visited("Pete.hang") is true>> 
+    << if $peteFriend is false >>
+    Pete: I don't want to hang with you, leave me alone dude.
+    << stop >> 
+    << endif >> 
+    << if $peteFriend is true >>
+    Pete: Yeah man, I already said we can hang out.
+    << stop >> 
+    << endif >> 
+<< endif >>
+
+<< if visited("Pete.hang") is false >>
+    Pete: Sure, what are you in here for?
+    [[ Selling Cocaine (the truth) |Player.truth]]
+    [[ Shoplifting (a lie) |Player.lie]]
+    [[ I'm not saying |Player.saynothing]]
+<< else >>
+
+<< endif >>
+===
+title: Pete.friend
+tags: 
+colorID: 0
+position: -289,98
+---
+Pete: I don't want friends, just want to serve my time.
+===
+title: Player.truth
+tags: 
+colorID: 0
+position: -129,-483
+---
+<< set $peteFriend to false>>
+<< set $playerInsideFor to "truth" >> 
+Pete: That stuff has ruined me before, I don't want to hang with you.
+===
+title: Player.lie
+tags: 
+colorID: 0
+position: 627,-685
+---
+<< set $peteFriend to true>>
+<< set $playerInsideFor to "lie" >> 
+Pete: That's a small time crime, I don't mind hanging with you.
+Pete: The guards are asking who has smuggled in the phone.
+[[Yeah I know who it is. |Pete.end]]
+[[ I'm unsure who it is, do you know? |Pete.phone]]
+===
+title: Player.saynothing
+tags: 
+colorID: 0
+position: 631,-380
+---
+<< set $peteFriend to true>>
+<< set $playerInsideFor to "nothing" >> 
+Pete: I respect that, just serve your time with me.
+Pete: The guards are asking who has smuggled in the phone.
+[[Yeah I know who it is. |Pete.end]]
+[[ I'm unsure who it is, do you know? |Pete.phone]]
+===
+title: Pete.phone
+tags: 
+colorID: 0
+position: 1317,-230
+---
+<< if $peteFriend is false >>
+    Pete: We're not friends but I can tell you who smuggled the phone, I'm certain it is Matt.
+<< stop >> 
+<< endif >>
+<< if $peteFriend is true >>
+    Pete: As we're friends I'll tell you, I have smuggled the phone. If you need to use it let me know. But don't tell the guard.
+<< stop >> 
+<< endif >>
+===
+title: Pete.end
+tags: 
+colorID: 0
+position: 1078,-700
+---
+Pete: That's fine then, are you going to tell the guard?
+[[ Yes |Pete.yes]]
+[[ No |Pete.phone]]
+===
+title: Pete.yes
+tags: 
+colorID: 0
+position: 885,-1145
+---
+<< set $peteFriend to false >> 
+Pete: Snitches get stitches, I can't be friends with a snitch.
+<< stop >>
+===
