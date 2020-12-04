@@ -1,0 +1,15 @@
+title: Guard.start
+tags: 
+colorID: 0
+position: -306,-572
+---
+Guard: Do you have a problem?
+[[ No problem |Guard.noProb]]
+===
+title: Guard.noProb
+tags: 
+colorID: 0
+position: 95,-574
+---
+
+===

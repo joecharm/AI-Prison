@@ -507,6 +507,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 60.636, y: -17.09, z: -26.386002}
+--- !u!1001 &867284490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 482255026005404049, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026150930304, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.713707
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214387, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482255026928214388, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: m_Name
+      value: Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433707429775420022, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: scriptToLoad
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 9516816b8870f1e41a6ba84a35afcd08,
+        type: 3}
+    - target: {fileID: 8433707429775420022, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: talkToNode
+      value: Guard.start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433707429775420022, guid: cc6799a99f6879a4db9b3906d691f3e3,
+        type: 3}
+      propertyPath: characterName
+      value: Guard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc6799a99f6879a4db9b3906d691f3e3, type: 3}
 --- !u!1 &1206396845
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,10 +728,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206396845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd8ed576df70b0945a8194cbfee9f240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: 5.02
+  boost: 3.5
   positionLerpTime: 0.2
   mouseSensitivityCurve:
     serializedVersion: 2
