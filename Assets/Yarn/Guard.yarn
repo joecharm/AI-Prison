@@ -1,8 +1,9 @@
 title: Guard.start
 tags: 
 colorID: 0
-position: -306,-572
+position: -323,-583
 ---
+<< ToggleAnimation Guard GuardHey >> 
 Guard: Do you have a problem?
 [[ I know who has smuggled in the phone. |Guard.yes]]
 [[ No problem |Guard.noProb]]
@@ -10,15 +11,16 @@ Guard: Do you have a problem?
 title: Guard.noProb
 tags: 
 colorID: 0
-position: 95,-574
+position: 40,-581
 ---
 
 ===
 title: Guard.yes
 tags: 
 colorID: 0
-position: -310,-855
+position: -326,-872
 ---
+<< ToggleAnimation Guard GuardHeadTurnNo >> 
 Guard: Are you sure?
 Guard: Don't lie to me otherwise the other inmates won't be happy.
 [[ I'm sure |Guard.sure]]
@@ -28,6 +30,7 @@ tags:
 colorID: 0
 position: -324,-1151
 ---
+<< ToggleAnimation Guard AskQuestion >>
 Guard: Who has smuggled in the phone? 
 [[ Pete |Guard.pete]]
 [[ Ashley |Guard.ash]]
