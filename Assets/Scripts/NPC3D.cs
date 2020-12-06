@@ -11,7 +11,9 @@ public class NPC3D : MonoBehaviour
     public YarnProgram scriptToLoad;
     DialogueRunner dialogueRunner; //refernce to the dialogue control
     private GameObject dialogueCanavas; //refernce to the canvas
-    Vector3 PostionSpeachBubble = new Vector3(0f, 0.0f, -0.6f);
+    Vector3 PostionSpeachBubble = new Vector3(1.0f, 1.0f, -1.0f);
+    // set a target for the dialogue canvas to point at
+    public GameObject Player;
 
 
     /// </summary>
@@ -54,6 +56,15 @@ public class NPC3D : MonoBehaviour
                 Debug.Log("start dialogue");
                 dialogueRunner.StartDialogue(talkToNode);
             }
+        }
+    }
+
+    private void Update()
+    {
+        // if the dialogue canvas is running, rotate the canvas to the players' orientation
+        if (dialogueRunner.IsDialogueRunning)
+        {
+            dialogueCanavas.transform.rotation = Player.transform.rotation;
         }
     }
 

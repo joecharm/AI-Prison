@@ -13,7 +13,7 @@ tags:
 colorID: 0
 position: 40,-581
 ---
-
+Empty Text
 ===
 title: Guard.yes
 tags: 
@@ -39,8 +39,9 @@ Guard: Who has smuggled in the phone?
 title: Guard.pete
 tags: 
 colorID: 0
-position: -654,-1462
+position: -667,-1457
 ---
+<< ToggleAnimation Guard GuardHeadTurnNo >> 
 Guard: I was suspicious it was Pete, thanks for letting me know.
 Guard: Better watch your back now you've snitched on Pete.
 << set $gameWon to true >>
@@ -51,15 +52,17 @@ colorID: 0
 position: -324,-1456
 ---
 Guard: We've searched Ashley's cell, it's not him.
+<< ToggleAnimation Guard Pointing >> 
 Guard: Watch your back now you've snitched on the wrong person.
 << set $gameWon to false >>
 ===
 title: Guard.matt
 tags: 
 colorID: 0
-position: 17,-1442
+position: 49,-1450
 ---
 Guard: We've searched Matt's cell, it's not him.
+<< ToggleAnimation Guard Pointing >> 
 Guard: Watch your back now you've snitched on the wrong person.
 << set $gameWon to false >>
 ===
