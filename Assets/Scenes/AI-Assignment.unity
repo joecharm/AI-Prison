@@ -437,6 +437,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257700957}
   m_Mesh: {fileID: 4300000, guid: 32337b2ced4e84f419f3bc3231bb7a49, type: 3}
+--- !u!95 &277134915 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: dbb18309f2a9b854cba1afe2d4506234,
+    type: 3}
+  m_PrefabInstance: {fileID: 1307782569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371978069
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429850556}
   - component: {fileID: 429850557}
+  - component: {fileID: 429850558}
   m_Layer: 0
   m_Name: Pete
   m_TagString: Untagged
@@ -562,6 +569,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1206396849}
+--- !u!114 &429850558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429850555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1df1f3db24ae7440a496504e6a62182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationController: {fileID: 1909320831}
 --- !u!1 &471440816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,15 +1218,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209138281709242, guid: d3ba82bed75290c46ad5b07ab9a7436e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49.85271
+      value: -49.839
       objectReference: {fileID: 0}
     - target: {fileID: 4209138281709242, guid: d3ba82bed75290c46ad5b07ab9a7436e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.943672
+      value: 43.924
       objectReference: {fileID: 0}
     - target: {fileID: 4209138281709242, guid: d3ba82bed75290c46ad5b07ab9a7436e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.723982
+      value: -4.354
       objectReference: {fileID: 0}
     - target: {fileID: 4209138281709242, guid: d3ba82bed75290c46ad5b07ab9a7436e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2111,7 +2131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206396845}
   m_LocalRotation: {x: -0, y: 0.040847305, z: -0, w: 0.9991655}
-  m_LocalPosition: {x: 6.21, y: 1.77, z: 1.52}
+  m_LocalPosition: {x: 6.21, y: 1.26, z: 1.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1489791032}
@@ -2229,7 +2249,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dbb18309f2a9b854cba1afe2d4506234,
         type: 3}
       propertyPath: m_Name
-      value: Prisoner
+      value: Ashley
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: dbb18309f2a9b854cba1afe2d4506234,
         type: 3}
@@ -2712,7 +2732,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 66a2c43692a15884ba3fec283340f0c4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -3035,7 +3055,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dbb18309f2a9b854cba1afe2d4506234,
         type: 3}
       propertyPath: m_Name
-      value: Prisoner
+      value: Pete
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: dbb18309f2a9b854cba1afe2d4506234,
         type: 3}
@@ -3160,6 +3180,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4209138281709242, guid: d3ba82bed75290c46ad5b07ab9a7436e,
     type: 3}
   m_PrefabInstance: {fileID: 670444849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1909320831 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: dbb18309f2a9b854cba1afe2d4506234,
+    type: 3}
+  m_PrefabInstance: {fileID: 1732763719}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1944089698
 PrefabInstance:
@@ -3954,6 +3980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482255026742186845}
   - component: {fileID: 482255026742186843}
+  - component: {fileID: 482255026742186844}
   m_Layer: 0
   m_Name: Matt
   m_TagString: Untagged
@@ -3974,6 +4001,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1206396849}
+--- !u!114 &482255026742186844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482255026742186842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1df1f3db24ae7440a496504e6a62182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationController: {fileID: 1513798890}
 --- !u!4 &482255026742186845
 Transform:
   m_ObjectHideFlags: 0
@@ -4016,6 +4056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482255027016142083}
   - component: {fileID: 482255027016142085}
+  - component: {fileID: 482255027016142086}
   m_Layer: 0
   m_Name: Ashley
   m_TagString: Untagged
@@ -4036,6 +4077,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1206396849}
+--- !u!114 &482255027016142086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482255027016142084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1df1f3db24ae7440a496504e6a62182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationController: {fileID: 277134915}
 --- !u!4 &482255027151460217
 Transform:
   m_ObjectHideFlags: 0
@@ -4267,7 +4321,7 @@ GameObject:
   - component: {fileID: 543450652186499852}
   - component: {fileID: 1513798890}
   m_Layer: 0
-  m_Name: Prisoner
+  m_Name: Matt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

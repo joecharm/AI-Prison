@@ -1,16 +1,19 @@
 title: Pete.start
 tags: 
 colorID: 0
-position: 292,152
+position: 286,93
 ---
 << if visited("Pete.start") is false >> 
+    << ToggleAnimation Pete CasualGreeting >> 
     Pete: What do you want?
     << set $peteCount = 0 >> 
 << else >>
         << set $peteCount = $peteCount + 1>> 
+        << ToggleAnimation Pete GuardHeadTurnNo >> 
         Pete: Why do you keep bothering me man?
     << if $peteCount >= 3 >> 
         << if $peteFriend is false >> 
+            << ToggleAnimation Pete AngryGesture >> 
             Pete: Leave me alone before I hurt you
          << stop >> 
         << endif >> 
@@ -34,10 +37,12 @@ position: 285,-484
 ---
 << if visited("Pete.hang") is true>> 
     << if $peteFriend is false >>
+    << ToggleAnimation Pete GuardHeadTurnNo >> 
     Pete: I don't want to hang with you, leave me alone dude.
     << stop >> 
     << endif >> 
     << if $peteFriend is true >>
+    << ToggleAnimation Pete CasualGreeting >> 
     Pete: Yeah man, I already said we can hang out.
     << stop >> 
     << endif >> 
@@ -57,6 +62,7 @@ tags:
 colorID: 0
 position: -289,98
 ---
+<< ToggleAnimation Pete AngryGesture >> 
 Pete: I don't want friends, just want to serve my time.
 ===
 title: Player.truth
@@ -66,15 +72,17 @@ position: -129,-483
 ---
 << set $peteFriend to false>>
 << set $playerInsideFor to "truth" >> 
+<< ToggleAnimation Pete GuardHeadTurnNo >> 
 Pete: That stuff has ruined me before, I don't want to hang with you.
 ===
 title: Player.lie
 tags: 
 colorID: 0
-position: 627,-685
+position: 628,-703
 ---
 << set $peteFriend to true>>
 << set $playerInsideFor to "lie" >> 
+<< ToggleAnimation Pete Pointing >> 
 Pete: That's a small time crime, I don't mind hanging with you.
 Pete: The guards are asking who has smuggled in the phone.
 [[Yeah I know who it is. |Pete.end]]
@@ -87,6 +95,7 @@ position: 631,-380
 ---
 << set $peteFriend to true>>
 << set $playerInsideFor to "nothing" >> 
+<< ToggleAnimation Pete CasualGreeting >> 
 Pete: I respect that, just serve your time with me.
 Pete: The guards are asking who has smuggled in the phone.
 [[Yeah I know who it is. |Pete.end]]
@@ -95,13 +104,14 @@ Pete: The guards are asking who has smuggled in the phone.
 title: Pete.phone
 tags: 
 colorID: 0
-position: 1317,-230
+position: 1317,-232
 ---
 << if $peteFriend is false >>
     Pete: We're not friends but I can tell you who smuggled the phone, I'm certain it is Matt.
 << stop >> 
 << endif >>
 << if $peteFriend is true >>
+    << ToggleAnimation Pete CasualGreeting >> 
     Pete: As we're friends I'll tell you, I have smuggled the phone. If you need to use it let me know. But don't tell the guard.
 << stop >> 
 << endif >>
@@ -111,6 +121,7 @@ tags:
 colorID: 0
 position: 1078,-700
 ---
+<< ToggleAnimation Pete Pointing >> 
 Pete: That's fine then, are you going to tell the guard?
 [[ Yes |Pete.yes]]
 [[ No |Pete.phone]]
@@ -118,9 +129,10 @@ Pete: That's fine then, are you going to tell the guard?
 title: Pete.yes
 tags: 
 colorID: 0
-position: 885,-1145
+position: 913,-1099
 ---
 << set $peteFriend to false >> 
+<< ToggleAnimation Pete AngryGesture >> 
 Pete: Snitches get stitches, I can't be friends with a snitch.
 << stop >>
 ===

@@ -1,9 +1,10 @@
 title: Matt.start
 tags: 
 colorID: 0
-position: 132,-662
+position: 130,-661
 ---
 << if visited("Matt.start") is false >> 
+    << ToggleAnimation Matt SittingDisapproval >> 
     Matt: Hey dude, don't come any closer!
     Matt: Unless you know who smuggled in the phone?
 <<else>>
@@ -11,6 +12,7 @@ position: 132,-662
         Matt: Hey mate.
         <<endif>>
         <<if $mattFriend is false >>
+        << ToggleAnimation Matt SittingDisapproval >> 
         Matt: Go away.
         <<endif>>
 << endif >>
@@ -46,6 +48,7 @@ tags:
 colorID: 0
 position: -776,-1104
 ---
+<< ToggleAnimation Matt SittingRubbingArm >>
 Matt: I don't believe you, me and Pete are friends, it can't be him. Go away.
 << set $mattFriend to false >>
 ===
@@ -54,14 +57,16 @@ tags:
 colorID: 0
 position: -468,-1108
 ---
+<< ToggleAnimation Matt SittingRubbingArm >>
 Matt: Yeah that makes sense, I thought it might be Ashley myself. I hate Ashley.
 << set $mattFriend to true >>
 ===
 title: Matt.matt
 tags: 
 colorID: 0
-position: -169,-1095
+position: -172,-1109
 ---
+<< ToggleAnimation Matt SittingAngry >>
 Matt: I wish I had a phone but sadly not. If you don't know anything then leave.
 << set $mattFriend to false >>
 ===
@@ -70,6 +75,7 @@ tags:
 colorID: 0
 position: 132,-1105
 ---
+<< ToggleAnimation Matt SittingAngry >>
 Matt: Don't be like that. If you're not going to tell me then go away.
 << set $mattFriend to false >>
 ===
