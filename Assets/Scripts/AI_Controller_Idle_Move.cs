@@ -140,7 +140,7 @@ public class AI_Controller_Idle_Move : MonoBehaviour
 
         if (state != State.Idle)
         {
-            _waitTime = Random.Range(2f, 5f);
+            _waitTime = Random.Range(1f, 5f);
             _waitTimer = 0f;
 
             state = State.Idle;
