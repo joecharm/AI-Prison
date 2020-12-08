@@ -3597,7 +3597,7 @@ GameObject:
   - component: {fileID: 1956222899}
   - component: {fileID: 1956222900}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: ShoveTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
