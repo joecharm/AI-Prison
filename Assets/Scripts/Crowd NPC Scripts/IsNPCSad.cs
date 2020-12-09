@@ -28,12 +28,18 @@ public class IsNPCSad : MonoBehaviour
             sadChance = Random.Range(0.0f, 1.0f);
             // set the float in the animator parameter
             animator.SetFloat("IsSadChance", sadChance);
-            // set hasBeenSad to true
-            hasBeenSad = true;
-            // set the boolean parameter of hasBeenSad to true
-            animator.SetBool("hasBeenSad", true);
-            // Play the animator state
-            animator.Play("SadIdle");
+
+            // if the sad chance is above 0.5
+            if (sadChance >= 0.5f)
+            {
+                // set hasBeenSad to true
+                hasBeenSad = true;
+                // set the boolean parameter of hasBeenSad to true
+                animator.SetBool("hasBeenSad", true);
+                // Play the animator state one time
+                animator.Play("SadIdle");
+            }
+
         }
     }
 
