@@ -6,11 +6,13 @@ position: -242,-220
 << if visited("Ashley.start") is false>>
     << if $peteFriend is true >>
         << ToggleAnimation Ashley CasualGreeting >> 
+        << AshleyFriends Ashley>> 
         Ashley: Hey you, I've seen you made friends with Pete.
         << set $ashleyFriend to true >> 
     << endif >> 
     << if $peteFriend is false >> 
         << ToggleAnimation Ashley CasualGreeting >> 
+        << AshleyIntro Ashley >>
         Ashley: Hey you, you're new around here. 
         << set $ashleyFriend to false >>
     << endif >>

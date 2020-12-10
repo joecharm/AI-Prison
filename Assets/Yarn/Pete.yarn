@@ -1,10 +1,11 @@
 title: Pete.start
 tags: 
 colorID: 0
-position: 286,93
+position: 286,91
 ---
 << if visited("Pete.start") is false >> 
     << ToggleAnimation Pete CasualGreeting >> 
+    << PeteIntro Pete>> 
     Pete: What do you want?
     << set $peteCount = 0 >> 
 << else >>

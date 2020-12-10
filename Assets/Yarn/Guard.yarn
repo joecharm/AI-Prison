@@ -46,7 +46,7 @@ position: -667,-1457
 << ToggleAnimation Guard GuardHeadTurnNo >> 
 Guard: I was suspicious it was Pete, thanks for letting me know.
 Guard: Better watch your back now you've snitched on Pete.
-<< set $gameWon to true >>
+<< gameSuccess Guard >>
 ===
 title: Guard.ash
 tags: 
@@ -57,7 +57,7 @@ Guard: We've searched Ashley's cell, it's not him.
 << ToggleAnimation Guard Pointing >> 
 << GuardWrongPerson Guard >> 
 Guard: Watch your back now you've snitched on the wrong person.
-<< set $gameWon to false >>
+<< gameFail Guard >>
 ===
 title: Guard.matt
 tags: 
@@ -68,5 +68,5 @@ Guard: We've searched Matt's cell, it's not him.
 << ToggleAnimation Guard Pointing >> 
 << GuardWrongPerson Guard >> 
 Guard: Watch your back now you've snitched on the wrong person.
-<< set $gameWon to false >>
+<< gameFail Guard >>
 ===
