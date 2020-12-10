@@ -7,6 +7,7 @@ public class TriggerBumpNPC : MonoBehaviour
     // The animator on the NPC model
     public Animator CrowdAnimator;
     private int count = 0;
+    private bool hasPunched = false;
 
     // On trigger enter of the collider
     private void OnTriggerEnter(Collider other)
@@ -14,6 +15,8 @@ public class TriggerBumpNPC : MonoBehaviour
         // if the tag of the collider does not include Player
         if(other.CompareTag("Player"))
         {
+            // trigger the bumped angry animation 
+            CrowdAnimator.SetTrigger("TriggerBumpNPC");
 
             // iterate on count to track number of times of collision
             count++;
@@ -21,29 +24,17 @@ public class TriggerBumpNPC : MonoBehaviour
             // if count is greater than 2, set throw punch to True
             if(count > 2)
             {
-                CrowdAnimator.SetBool("ThrowPunch", true);
+                // if the player has not been punched
+                if(hasPunched == false)
+                {
+                    CrowdAnimator.SetTrigger("ThrowPunch");
+                    // set bool hasPunched to true
+                    hasPunched = true;
+                }
+                
             }
-
-            // Set the boolean to true which triggers the TriggerBumpNPC (causing the angry animation) - only triggers when punch is not thrown
-            if (CrowdAnimator.GetBool("ThrowPunch") == false)
-            {
-                CrowdAnimator.SetBool("TriggerBumpNPC", true);
-            }
-
         }
         
     }
 
-    // When the player leaves the collider
-    private void OnTriggerExit(Collider other)
-    {
-        // if the tag of the collider does not include Player
-        if (other.CompareTag("Player"))
-        {
-            // Stop the animation that was triggered above
-            CrowdAnimator.SetBool("TriggerBumpNPC", false);
-            CrowdAnimator.SetBool("ThrowPunch", false);
-        }
-
-    }
 }

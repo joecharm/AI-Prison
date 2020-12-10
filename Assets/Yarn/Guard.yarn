@@ -4,6 +4,7 @@ colorID: 0
 position: -323,-583
 ---
 << ToggleAnimation Guard GuardHey >> 
+<< GuardIntro Guard >> 
 Guard: Do you have a problem?
 [[ I know who has smuggled in the phone. |Guard.yes]]
 [[ No problem |Guard.noProb]]
@@ -13,7 +14,7 @@ tags:
 colorID: 0
 position: 40,-581
 ---
-Empty Text
+
 ===
 title: Guard.yes
 tags: 
@@ -21,6 +22,7 @@ colorID: 0
 position: -326,-872
 ---
 << ToggleAnimation Guard GuardHeadTurnNo >> 
+<< GuardSure Guard >> 
 Guard: Are you sure?
 Guard: Don't lie to me otherwise the other inmates won't be happy.
 [[ I'm sure |Guard.sure]]
@@ -28,7 +30,7 @@ Guard: Don't lie to me otherwise the other inmates won't be happy.
 title: Guard.sure
 tags: 
 colorID: 0
-position: -324,-1151
+position: -324,-1153
 ---
 << ToggleAnimation Guard AskQuestion >>
 Guard: Who has smuggled in the phone? 
@@ -53,6 +55,7 @@ position: -324,-1456
 ---
 Guard: We've searched Ashley's cell, it's not him.
 << ToggleAnimation Guard Pointing >> 
+<< GuardWrongPerson Guard >> 
 Guard: Watch your back now you've snitched on the wrong person.
 << set $gameWon to false >>
 ===
@@ -63,6 +66,7 @@ position: 49,-1450
 ---
 Guard: We've searched Matt's cell, it's not him.
 << ToggleAnimation Guard Pointing >> 
+<< GuardWrongPerson Guard >> 
 Guard: Watch your back now you've snitched on the wrong person.
 << set $gameWon to false >>
 ===
