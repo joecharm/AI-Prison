@@ -23,3 +23,11 @@ The player can point the ray in the direction they want to travel and press grip
 # Release
 
 [Download V1.0](https://github.com/joecharm/AI-Prison/releases/download/V1/AI-Prison-FinalBuild.zip)
+
+Tested on:
+  Hardware:
+  Intel Core i7-7700 CPU @2.8GHz
+  16GB RAM
+  GTX1070
+  Acer Windows Mixed Reality VR Headset
+
