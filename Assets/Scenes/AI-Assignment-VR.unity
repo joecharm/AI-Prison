@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ae486185a018b4a4a8231db7fef16786,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1227,6 +1227,7 @@ GameObject:
   - component: {fileID: 429850557}
   - component: {fileID: 429850558}
   - component: {fileID: 429850559}
+  - component: {fileID: 429850560}
   m_Layer: 0
   m_Name: Pete
   m_TagString: Untagged
@@ -1263,7 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbffd632195828b46aaf7b8a8f19e0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2001175897}
 --- !u!114 &429850558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,6 +1291,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1049275200}
+--- !u!208 &429850560
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429850555}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &471440816
 GameObject:
   m_ObjectHideFlags: 0
@@ -7549,7 +7566,7 @@ GameObject:
   - component: {fileID: 2001175898}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Player
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8542,6 +8559,7 @@ GameObject:
   - component: {fileID: 482255026742186848}
   - component: {fileID: 482255026742186849}
   - component: {fileID: 482255026742186850}
+  - component: {fileID: 482255026742186851}
   m_Layer: 0
   m_Name: Matt
   m_TagString: Untagged
@@ -8561,7 +8579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbffd632195828b46aaf7b8a8f19e0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2001175897}
 --- !u!114 &482255026742186844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8657,6 +8675,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 569320583}
+--- !u!208 &482255026742186851
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482255026742186842}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &482255027016142083
 Transform:
   m_ObjectHideFlags: 0
@@ -8687,6 +8721,7 @@ GameObject:
   - component: {fileID: 482255027016142086}
   - component: {fileID: 482255027016142088}
   - component: {fileID: 482255027016142087}
+  - component: {fileID: 482255027016142089}
   m_Layer: 0
   m_Name: Ashley
   m_TagString: Untagged
@@ -8706,7 +8741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbffd632195828b46aaf7b8a8f19e0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2001175897}
 --- !u!114 &482255027016142086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8746,6 +8781,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1348417659}
+--- !u!208 &482255027016142089
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482255027016142084}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &482255027151460217
 Transform:
   m_ObjectHideFlags: 0
@@ -8797,7 +8848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbffd632195828b46aaf7b8a8f19e0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2001175897}
 --- !u!114 &482255027151460224
 MonoBehaviour:
   m_ObjectHideFlags: 0
